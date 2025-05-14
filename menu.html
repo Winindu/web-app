@@ -3,82 +3,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Whispering Willow - Fine Dining Experience</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/menus.css">
-  <link rel="stylesheet" href="css/footer.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <title>Menu - Whipering Willow</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="logo">
-      <a href="index.html">
-        <img src="images/logo.png" alt="Whispering Willow">
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#" class="active">HOME</a></li>
-        <li><a href="#">MENU</a></li>
-        <li><a href="#">RESERVATION</a></li>
-        <li><a href="#">ABOUT</a></li>
-      </ul>
-    </nav>
-    <div class="header-icons">
-      <a href="#" class="icon">
-        <i class="fas fa-user"></i>
-      </a>
-      <a href="#" class="icon">
-        <i class="fas fa-shopping-cart"></i>
-      </a>
-      <a href="#" class="icon search-icon">
-        <i class="fas fa-search"></i>
-      </a>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Whipering Willow">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="menu.html" class="active">MENU</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <a href="login.html" class="account-icon"><i class="icon-user"></i></a>
+        <a href="#" class="cart-icon"><i class="icon-cart"></i></a>
+        <a href="#" class="search-icon"><i class="icon-search"></i></a>
+      </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <section class="menus-section">
-      <h1>MENUS</h1>
-      
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Our Menus</h1>
+      <p>Explore our carefully curated selection of dishes</p>
+    </div>
+  </section>
+
+  <!-- Menu Categories -->
+  <section class="menu-categories">
+    <div class="container">
       <div class="menu-grid">
         <!-- Chef's Special Menu -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/4551832/pexels-photo-4551832.jpeg" alt="Chef's Special Menu">
+            <img src="https://images.pexels.com/photos/3535383/pexels-photo-3535383.jpeg" alt="Chef's Special Menu">
           </div>
           <div class="menu-content">
             <h2>Chef's Special Menu</h2>
             <p>A curated 4-course journey of exceptional flavors</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Starters & Small Plates -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg" alt="Starters & Small Plates">
+            <img src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg" alt="Starters & Small Plates">
           </div>
           <div class="menu-content">
             <h2>Starters & Small Plates</h2>
             <p>Begin your meal with our flavorful appetizers</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Main Courses -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg" alt="Main Courses">
+            <img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg" alt="Main Courses">
           </div>
           <div class="menu-content">
             <h2>Main Courses</h2>
             <p>Savor the heart of our menu with signature dishes</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
@@ -89,101 +85,90 @@
           </div>
           <div class="menu-content">
             <h2>Desserts & Sweets</h2>
-            <p>End on a sweet note with handcrafted delights</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <p>End on a sweet note with handcrafted desserts</p>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Wines & Beverages -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/1479706/pexels-photo-1479706.jpeg" alt="Wines & Beverages">
+            <img src="https://images.pexels.com/photos/66636/pexels-photo-66636.jpeg" alt="Wines & Beverages">
           </div>
           <div class="menu-content">
             <h2>Wines & Beverages</h2>
-            <p>Explore our carefully curated wine list and drinks</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <p>Explore our carefully curated wine list</p>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Set Menus & Pairings -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg" alt="Set Menus & Pairings">
+            <img src="https://images.pexels.com/photos/2271107/pexels-photo-2271107.jpeg" alt="Set Menus & Pairings">
           </div>
           <div class="menu-content">
             <h2>Set Menus & Pairings</h2>
             <p>Enjoy a pre-fixed dining experience</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Cheese & Shared Plates -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/1292294/pexels-photo-1292294.jpeg" alt="Cheese & Shared Plates">
+            <img src="https://images.pexels.com/photos/1927383/pexels-photo-1927383.jpeg" alt="Cheese & Shared Plates">
           </div>
           <div class="menu-content">
             <h2>Cheese & Shared Plates</h2>
-            <p>A selection of fine cheeses and shareable dishes</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <p>A selection of fine cheeses and sharing platters</p>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
 
         <!-- Light Bites & Sides -->
         <div class="menu-card">
           <div class="menu-image">
-            <img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg" alt="Light Bites & Sides">
+            <img src="https://images.pexels.com/photos/1095550/pexels-photo-1095550.jpeg" alt="Light Bites & Sides">
           </div>
           <div class="menu-content">
             <h2>Light Bites & Sides</h2>
-            <p>Complement your meal with our flavorful sides</p>
-            <a href="#" class="lets-go-btn">LET'S GO</a>
+            <p>Complement your meal with our side dishes</p>
+            <a href="#" class="btn secondary-btn">LET'S GO</a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer>
-    <div class="social-icons">
-      <a href="#" class="social-icon">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="#" class="social-icon">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="#" class="social-icon">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a href="#" class="social-icon">
-        <i class="fab fa-instagram"></i>
-      </a>
-    </div>
-
-    <div class="contact-info">
-      <div class="phone">
-        <i class="fas fa-phone"></i>
-        <span>041 234 5678</span>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Whipering Willow">
+        </div>
+        <div class="footer-contact">
+          <p><a href="tel:0412345678">041 234 5678</a></p>
+          <p><a href="mailto:info@whiperingwillow.com">info@whiperingwillow.com</a></p>
+          <p>23 Paradise Rd, Colombo 07, Sri Lanka</p>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+        </div>
       </div>
-      <div class="email">
-        <i class="fas fa-envelope"></i>
-        <span>reservations@whisperingwillow.com</span>
+      <div class="footer-newsletter">
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit" class="btn primary-btn">Subscribe</button>
+        </form>
       </div>
-    </div>
-
-    <div class="newsletter">
-      <form>
-        <input type="email" placeholder="Your Email">
-        <button type="submit">
-          <i class="fas fa-arrow-right"></i>
-        </button>
-      </form>
-    </div>
-
-    <div class="copyright">
-      <p>&copy; 2025 All Rights Reserved.</p>
+      <div class="footer-copyright">
+        <p>&copy; 2025 All Rights Reserved</p>
+      </div>
     </div>
   </footer>
 </body>
