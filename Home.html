@@ -1,135 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whipering Willow Restaurant</title>
-    <link rel="stylesheet" href="home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whipering Willow - Fine Dining Restaurant</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/home/home.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo">WW</div>
-            <ul class="nav-links">
-                <li><a href="#" class="active">HOME</a></li>
-                <li><a href="#">MENU</a></li>
-                <li><a href="#">RESERVATIONS</a></li>
-                <li><a href="#">ABOUT</a></li>
-            </ul>
-            <div class="nav-icons">
-                <a href="#" class="user-icon">👤</a>
-                <a href="#" class="cart-icon">🛒</a>
-            </div>
-        </nav>
-    </header>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Whipering Willow">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">HOME</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="reservations.html">RESERVATIONS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <a href="login.html" class="account-icon"><i class="icon-user"></i></a>
+        <a href="#" class="cart-icon"><i class="icon-cart"></i></a>
+        <a href="#" class="search-icon"><i class="icon-search"></i></a>
+      </div>
+    </div>
+  </header>
 
-    <main>
-        <section class="hero" id="hero">
-            <div class="hero-content">
-                <h1>Whipering Willow</h1>
-                <p>Indulge in exquisite flavors, crafted with care, in a warm and serene ambiance.<br>
-                Experience the perfect blend of taste and tranquility</p>
-                <div class="hero-buttons">
-                    <button class="btn primary">ORDER NOW</button>
-                    <button class="btn secondary">RESERVE</button>
-                </div>
-            </div>
-            <div class="hero-controls">
-                <button class="prev">❮</button>
-                <button class="next">❯</button>
-            </div>
-        </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Whipering Willow</h1>
+      <p>Indulge in exquisite flavors, crafted with care, in a warm and serene ambiance.<br>
+      Experience the perfect blend of taste and tranquility</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn primary-btn">ORDER NOW</a>
+        <a href="reservations.html" class="btn secondary-btn">RESERVE</a>
+      </div>
+    </div>
+    <div class="hero-navigation">
+      <button class="nav-btn prev"><span>&lt;</span></button>
+      <button class="nav-btn next"><span>&gt;</span></button>
+    </div>
+  </section>
 
-        <section class="about">
-            <div class="about-content">
-                <h2>ABOUT OUR DINER</h2>
-                <h3>Taste & Grace</h3>
-                <p>Whispering Willow is nestled in the heart of an ancient forest, offering a magical dining experience with authentic Sri Lankan cuisine, crafted from nature's finest ingredients. Our menu celebrates the harmony between wild food and skillful cooking.</p>
-                <button class="btn secondary">READ MORE</button>
-            </div>
-            <div class="about-image">
-                <img src="https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg" alt="Restaurant ambiance">
-            </div>
-        </section>
-
-        <section class="bargains">
-            <h2>WILLOW'S BEST BARGAINS</h2>
-            <div class="bargains-container">
-                <div class="bargain-card">
-                    <img src="https://images.pexels.com/photos/2619967/pexels-photo-2619967.jpeg" alt="Pizza and drink">
-                    <h3>Whipering Feast</h3>
-                    <p>Savor a delightful combo of your favorite pizza...</p>
-                    <button class="btn secondary">READ MORE</button>
-                </div>
-                <div class="bargain-card">
-                    <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Burger and drink">
-                    <h3>Timber's Treasure</h3>
-                    <p>Indulge in a burger duo with a refreshing Coke...</p>
-                    <button class="btn secondary">READ MORE</button>
-                </div>
-                <div class="bargain-card">
-                    <img src="https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg" alt="Sandwich">
-                    <h3>Grove's Grand Deal</h3>
-                    <p>Get two savory sandwiches with a chilled soda...</p>
-                    <button class="btn secondary">READ MORE</button>
-                </div>
-                <div class="bargain-card">
-                    <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Dessert">
-                    <h3>Willow's Best Bite</h3>
-                    <p>Enjoy a hearty meal with a side of savings...</p>
-                    <button class="btn secondary">READ MORE</button>
-                </div>
-            </div>
-        </section>
-
-        <section class="testimonials">
-            <h2>HEAR FROM OUR GUESTS</h2>
-            <div class="testimonial-container">
-                <div class="testimonial active">
-                    <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" alt="Guest">
-                    <h3>Robert Downey</h3>
-                    <p>Had an amazing experience at Whispering Willow! The atmosphere was cozy, the staff was super friendly, and the food was absolutely delicious. Every bite was full of flavor, and you can tell they use fresh ingredients. Can't wait to come back!</p>
-                </div>
-            </div>
-            <div class="testimonial-controls">
-                <button class="prev">❮</button>
-                <button class="next">❯</button>
-            </div>
-        </section>
-
-        <section class="contact">
-            <h2>GET IN TOUCH</h2>
-            <form id="contactForm">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <input type="tel" placeholder="Your Phone" required>
-                <textarea placeholder="Message" required></textarea>
-                <button type="submit" class="btn primary">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-content">
-            <div class="social-links">
-                <a href="#" class="social-icon">f</a>
-                <a href="#" class="social-icon">t</a>
-                <a href="#" class="social-icon">in</a>
-                <a href="#" class="social-icon">yt</a>
-            </div>
-            <div class="contact-info">
-                <p>📞 041 234 5678</p>
-                <p>✉️ reservations@whiperingwillow.com</p>
-                <p>📍 23 Paradise Rd, Colombo 07, Sri Lanka</p>
-            </div>
-            <div class="newsletter">
-                <input type="email" placeholder="Your Email">
-                <button class="btn primary">→</button>
-            </div>
-            <p class="copyright">© 2025 All Rights Reserved.</p>
+  <!-- About Section -->
+  <section class="about-section">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>ABOUT OUR DINER</h2>
+          <h3>Taste & Grace</h3>
+          <p>Whispering Willow is nestled in the heart of an ancient forest, offering a magical dining experience with authentic Sri Lankan cuisine, crafted from nature's finest ingredients. Our menu celebrates the harmony between wild food and skillful cooking.</p>
+          <a href="about.html" class="btn secondary-btn">READ MORE</a>
         </div>
-    </footer>
+        <div class="about-image">
+          <img src="https://images.pexels.com/photos/3434523/pexels-photo-3434523.jpeg" alt="Restaurant ambiance">
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- <script src="home.js"></script> -->
+  <!-- Best Bargains -->
+  <section class="bargains-section">
+    <div class="container">
+      <h2>WILLOW'S BEST BARGAINS</h2>
+      <div class="bargains-slider">
+        <div class="bargain-card">
+          <img src="https://images.pexels.com/photos/1566837/pexels-photo-1566837.jpeg" alt="Whipering Feast">
+          <div class="bargain-content">
+            <h3>Whipering Feast</h3>
+            <p>Savor a delightful combo of your favorite pizza...</p>
+            <a href="#" class="btn secondary-btn">READ MORE</a>
+          </div>
+        </div>
+        <div class="bargain-card">
+          <img src="https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" alt="Timber's Treasure">
+          <div class="bargain-content">
+            <h3>Timber's Treasure</h3>
+            <p>Indulge in a burger duo with a refreshing Coke...</p>
+            <a href="#" class="btn secondary-btn">READ MORE</a>
+          </div>
+        </div>
+        <div class="bargain-card">
+          <img src="https://images.pexels.com/photos/1647163/pexels-photo-1647163.jpeg" alt="Grove's Grand Deal">
+          <div class="bargain-content">
+            <h3>Grove's Grand Deal</h3>
+            <p>Get two savory sandwiches with a chilled soda...</p>
+            <a href="#" class="btn secondary-btn">READ MORE</a>
+          </div>
+        </div>
+        <div class="bargain-card">
+          <img src="https://images.pexels.com/photos/3026808/pexels-photo-3026808.jpeg" alt="Willow's Best Bite">
+          <div class="bargain-content">
+            <h3>Willow's Best Bite</h3>
+            <p>Enjoy a hearty meal with a side of savings...</p>
+            <a href="#" class="btn secondary-btn">READ MORE</a>
+          </div>
+        </div>
+      </div>
+      <div class="slider-navigation">
+        <button class="nav-btn prev"><span>&lt;</span></button>
+        <button class="nav-btn next"><span>&gt;</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>HEAR FROM OUR GUESTS</h2>
+      <div class="testimonial-slider">
+        <div class="testimonial-card">
+          <div class="testimonial-image">
+            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Robert Downey">
+          </div>
+          <div class="testimonial-content">
+            <h3>Robert Downey</h3>
+            <p>Had an amazing experience at Whipering Willow! The atmosphere was cozy, the staff was super friendly, and the food was absolutely delicious. Every bite was full of flavor, and you can tell they use fresh ingredients. Can't wait to come back!</p>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-navigation">
+        <button class="nav-btn prev"><span>&lt;</span></button>
+        <button class="nav-btn next"><span>&gt;</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="contact-section">
+    <div class="container">
+      <h2>GET IN TOUCH</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="tel" placeholder="Your Phone" required>
+        <textarea placeholder="Message" required></textarea>
+        <button type="submit" class="btn primary-btn">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Whipering Willow">
+        </div>
+        <div class="footer-contact">
+          <p><a href="tel:0412345678">041 234 5678</a></p>
+          <p><a href="mailto:info@whiperingwillow.com">info@whiperingwillow.com</a></p>
+          <p>23 Paradise Rd, Colombo 07, Sri Lanka</p>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit" class="btn primary-btn">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
