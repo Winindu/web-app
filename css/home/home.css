@@ -107,13 +107,14 @@
 .bargains-slider {
   display: flex;
   gap: 30px;
+  justify-content: center;
   margin: 0 -15px;
   padding: 0 15px;
   overflow-x: hidden;
 }
 
 .bargain-card {
-  flex: 0 0 300px;
+  flex: 0 0 275px;
   background-color: var(--bg-color);
   border-radius: 8px;
   overflow: hidden;
