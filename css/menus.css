@@ -1,0 +1,123 @@
+/* Menu Grid Styles */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.menu-card {
+  background-color: var(--primary-black);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.menu-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+.menu-content {
+  padding: 1.5rem;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-content h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.menu-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.lets-go-btn {
+  align-self: flex-start;
+  padding: 0.5rem 1.25rem;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all var(--transition-speed);
+}
+
+.lets-go-btn:hover {
+  background-color: var(--primary-red);
+  border-color: var(--primary-red);
+  transform: translateY(-2px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .menu-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .menu-image {
+    height: 180px;
+  }
+  
+  .menu-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .menu-content p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .menu-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .menu-image {
+    height: 200px;
+  }
+}

@@ -1,0 +1,293 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: #ff0000;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-icons a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('banner1.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: #ff0000;
+    color: white;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    padding: 5rem 2rem;
+    gap: 4rem;
+    background: #f9f9f9;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Bargains Section */
+.bargains {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.bargains-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.bargain-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bargain-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.bargain-card h3 {
+    margin: 1rem;
+}
+
+.bargain-card p {
+    margin: 1rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 5rem 2rem;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.testimonial {
+    max-width: 600px;
+    margin: 0 auto;
+    display: none;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+#contactForm {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#contactForm textarea {
+    height: 150px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 3rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    background: white;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.newsletter input {
+    padding: 0.8rem;
+    border: none;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.copyright {
+    margin-top: 2rem;
+    color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .about {
+        flex-direction: column;
+    }
+
+    .bargains-container {
+        grid-template-columns: 1fr;
+    }
+}

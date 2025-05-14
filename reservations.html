@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservations - Whipering Willow</title>
+  <link rel="stylesheet" href="css/reservations/main.css">
+  <link rel="stylesheet" href="css/reservations/reservations.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo">
+        <img src="logo.png" alt="Whipering Willow">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="menu.html">MENU</a></li>
+          <li><a href="reservations.html" class="active">RESERVATIONS</a></li>
+          <li><a href="about.html">ABOUT</a></li>
+        </ul>
+      </nav>
+      <div class="nav-icons">
+        <a href="#" class="account-icon"><i class="icon-user"></i></a>
+        <a href="#" class="cart-icon"><i class="icon-cart"></i></a>
+        <a href="#" class="search-icon"><i class="icon-search"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Make a Reservation</h1>
+      <p>Reserve your table for an unforgettable dining experience at Whipering Willow</p>
+    </div>
+  </section>
+
+  <!-- Reservation Content -->
+  <section class="reservation-content">
+    <div class="container">
+      <div class="reservation-steps">
+        <div class="step active" data-step="1">
+          <span class="step-number">1</span>
+          <span class="step-text">Details</span>
+        </div>
+        <div class="step" data-step="2">
+          <span class="step-number">2</span>
+          <span class="step-text">Date & Time</span>
+        </div>
+        <div class="step" data-step="3">
+          <span class="step-number">3</span>
+          <span class="step-text">Confirm</span>
+        </div>
+      </div>
+
+      <div class="reservation-form-container">
+        <!-- Step 1: Guest Details -->
+        <div class="reservation-form active" id="step-1">
+          <h2>Guest Details</h2>
+          <form id="guest-details-form">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-message" id="name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required>
+              <span class="error-message" id="phone-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="guests">Number of Guests</label>
+              <div class="guest-counter">
+                <button type="button" class="counter-btn" id="decrease-guests">-</button>
+                <input type="number" id="guests" name="guests" min="1" max="20" value="2" readonly>
+                <button type="button" class="counter-btn" id="increase-guests">+</button>
+              </div>
+              <span class="error-message" id="guests-error"></span>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn primary-btn" id="next-to-step-2">Next: Select Date & Time</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 2: Date & Time Selection -->
+        <div class="reservation-form" id="step-2">
+          <h2>Select Date & Time</h2>
+          <div class="form-group">
+            <label>Reservation Date</label>
+            <div class="calendar-container" id="calendar-container"></div>
+          </div>
+          <div class="form-group">
+            <label>Available Time Slots</label>
+            <div class="time-slots" id="time-slots">
+              <p class="select-date-message">Please select a date to see available times</p>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn" id="back-to-step-1">Back</button>
+            <button type="button" class="btn primary-btn" id="next-to-step-3" disabled>Next: Confirm Reservation</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Confirmation -->
+        <div class="reservation-form" id="step-3">
+          <h2>Confirm Your Reservation</h2>
+          <div class="reservation-summary">
+            <div class="summary-item">
+              <span class="summary-label">Name:</span>
+              <span class="summary-value" id="summary-name"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Email:</span>
+              <span class="summary-value" id="summary-email"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Phone:</span>
+              <span class="summary-value" id="summary-phone"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Guests:</span>
+              <span class="summary-value" id="summary-guests"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Date:</span>
+              <span class="summary-value" id="summary-date"></span>
+            </div>
+            <div class="summary-item">
+              <span class="summary-label">Time:</span>
+              <span class="summary-value" id="summary-time"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="special-requests">Special Requests (Optional)</label>
+            <textarea id="special-requests" name="special-requests" rows="4" placeholder="Allergies, special occasions, seating preferences, etc."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="checkbox-container">
+              <input type="checkbox" id="terms-agree" name="terms-agree" required>
+              <span class="checkmark"></span>
+              I agree to the reservation <a href="#" class="terms-link">terms and conditions</a>
+            </label>
+            <span class="error-message" id="terms-error"></span>
+          </div>
+          <div class="form-actions">
+            <button type="button" class="btn secondary-btn" id="back-to-step-2">Back</button>
+            <button type="button" class="btn primary-btn" id="confirm-reservation">Confirm Reservation</button>
+          </div>
+        </div>
+
+        <!-- Confirmation Success -->
+        <div class="reservation-confirmation" id="reservation-success">
+          <div class="confirmation-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="64" height="64">
+              <circle cx="12" cy="12" r="11" fill="none" stroke="#ff3232" stroke-width="2"/>
+              <path d="M7 13l3 3 7-7" fill="none" stroke="#ff3232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h2>Reservation Confirmed!</h2>
+          <p>Thank you for choosing Whipering Willow. Your reservation has been confirmed.</p>
+          <div class="confirmation-details" id="confirmation-details"></div>
+          <p class="confirmation-note">A confirmation email has been sent to your email address.</p>
+          <div class="form-actions">
+            <a href="index.html" class="btn secondary-btn">Return to Home</a>
+            <button type="button" class="btn primary-btn" id="add-to-calendar">Add to Calendar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Policy Section -->
+  <section class="reservation-policy">
+    <div class="container">
+      <h2>Reservation Policy</h2>
+      <div class="policy-details">
+        <div class="policy-item">
+          <h3>Reservation Hours</h3>
+          <p>We accept dinner reservations between 5:00 PM and 10:00 PM, Tuesday through Sunday. We're closed on Mondays.</p>
+        </div>
+        <div class="policy-item">
+          <h3>Late Arrival</h3>
+          <p>We hold reservations for 15 minutes past the reservation time. Please call if you're running late.</p>
+        </div>
+        <div class="policy-item">
+          <h3>Cancellation</h3>
+          <p>If you need to cancel, please do so at least 24 hours in advance to avoid a cancellation fee.</p>
+        </div>
+        <div class="policy-item">
+          <h3>Large Parties</h3>
+          <p>For groups of 8 or more, please contact us directly at <a href="tel:0412345678">041 234 5678</a> or email <a href="mailto:reservations@whiperingwillow.com">reservations@whiperingwillow.com</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="logo.png" alt="Whipering Willow">
+        </div>
+        <div class="footer-contact">
+          <p><a href="tel:0412345678">041 234 5678</a></p>
+          <p><a href="mailto:reservations@whiperingwillow.com">reservations@whiperingwillow.com</a></p>
+          <p>23 Paradise Rd, Colombo 07, Sri Lanka</p>
+        </div>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="icon-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="icon-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="icon-linkedin"></i></a>
+          <a href="#" class="social-icon"><i class="icon-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-newsletter">
+        <form id="newsletter-form">
+          <input type="email" placeholder="Your Email" required>
+          <button type="submit" class="btn primary-btn">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- <script src="js/main.js"></script> -->
+  <!-- <script src="js/reservations.js"></script> -->
+</body>
+</html>
