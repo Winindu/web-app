@@ -217,14 +217,16 @@ nav ul li a.active {
 
 /* Footer */
 footer {
+  align-items: center;
+  justify-content: center;
   background-color: var(--bg-dark);
   padding: 60px 0 20px;
   margin-top: 80px;
 }
 
 .footer-content {
-  display: flex;
-  justify-content: space-between;
+  /*display: flex;*/
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 30px;
 }
@@ -233,13 +235,20 @@ footer {
   width: 100px;
   margin-bottom: 20px;
 }
-
+.footer-contact  {
+  display:flex;
+  justify-content: center;
+  gap: 2rem; /* space between items */
+  flex-wrap: wrap;
+}
 .footer-contact p {
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .footer-social {
   display: flex;
+  justify-content: center;
 }
 
 .social-icon {

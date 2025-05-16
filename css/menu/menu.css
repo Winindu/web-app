@@ -30,7 +30,7 @@
 /* Menu Categories */
 .menu-categories {
   padding: 80px 0;
-  background-color: var(--bg-color);
+  background-color: var(--text-color);
 }
 
 .menu-grid {
